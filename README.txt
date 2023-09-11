@@ -1,0 +1,1 @@
+This repository contains implementations for Labs for Embedded Systems class at Oakland University.
