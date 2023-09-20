@@ -4,15 +4,15 @@ USE ieee.std_logic_1164.ALL;
 
 -- Simple entity that connects the SW switches to the LEDR lights 
 -- Part 1 code --
-ENTITY LabOne IS
+ENTITY LabOnePart2 IS
     PORT (
         SW   : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
         LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
     );
-END ENTITY LabOne;
+END ENTITY LabOnePart2;
 
 
-ARCHITECTURE Behavior OF LabOne IS 
+ARCHITECTURE Behavior OF LabOnePart2 IS 
 BEGIN
     LEDR <= SW;
 END ARCHITECTURE Behavior;
