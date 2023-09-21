@@ -6,13 +6,16 @@ USE ieee.std_logic_1164.ALL;
 -- Part 1 code --
 ENTITY LabOnePart2 IS
     PORT (
-        SW   : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
-        LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		  S   : IN STD_LOGIC;
+        X   : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  Y   : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+        M 	: OUT STD_LOGIC_VECTOR( 3 DOWNTO 0)
     );
 END ENTITY LabOnePart2;
 
 
 ARCHITECTURE Behavior OF LabOnePart2 IS 
 BEGIN
-    LEDR <= SW;
+	
+	M <= Y when S = '1' else X;
 END ARCHITECTURE Behavior;
