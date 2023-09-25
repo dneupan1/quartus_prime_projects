@@ -46,7 +46,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
  
 
-ENTITY LabOnePartV IS
+ENTITY LabOnePartVI IS
     PORT ( 
         SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
         LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -55,11 +55,11 @@ ENTITY LabOnePartV IS
         HEX1 : OUT STD_LOGIC_VECTOR(0 TO 6);
         HEX0 : OUT STD_LOGIC_VECTOR(0 TO 6)
     );
-END LabOnePartV;
+END LabOnePartVI;
 
 
 -- main Architecture for Part 5
-ARCHITECTURE Behavior OF LabOnePartV IS
+ARCHITECTURE Behavior OF LabOnePartVI IS
     COMPONENT mux_2bit_4to1
         PORT ( 
             S, U, V, W, X : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
