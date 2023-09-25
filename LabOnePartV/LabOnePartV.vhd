@@ -65,7 +65,6 @@ ARCHITECTURE Behavior OF LabOnePartV IS
             S, U, V, W, X : IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
             M : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
         );
-		  
     END COMPONENT;
 
     COMPONENT char_7seg
@@ -76,57 +75,14 @@ ARCHITECTURE Behavior OF LabOnePartV IS
     END COMPONENT;
 
     SIGNAL M0, M1, M2, M3 : STD_LOGIC_VECTOR(1 DOWNTO 0);
-
-
-
+    SIGNAL ROTATE_HEX0, ROTATE_HEX1, ROTATE_HEX2, ROTATE_HEX3: STD_LOGIC_VECTOR(1 DOWNTO 0);
 
 BEGIN
-    --U0: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(5 DOWNTO 4), SW(3 DOWNTO 2), SW(1 DOWNTO 0), M0);
-    --U1: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(5 DOWNTO 4), SW(3 DOWNTO 2), SW(1 DOWNTO 0), M1);
-    --U2: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(5 DOWNTO 4), SW(3 DOWNTO 2), SW(1 DOWNTO 0), M2);
-    --U3: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(5 DOWNTO 4), SW(3 DOWNTO 2), SW(1 DOWNTO 0), M3);
+	U0: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(5 DOWNTO 4), SW(3 DOWNTO 2), SW(1 DOWNTO 0), M0);
+	H0: char_7seg PORT MAP (M0, HEX0);
+	
 
-    --H0: char_7seg PORT MAP (M0, HEX0);
-    --H1: char_7seg PORT MAP (M1, HEX1);
-    --H2: char_7seg PORT MAP (M2, HEX2);
-    --H3: char_7seg PORT MAP (M3, HEX3);
-
-    PROCESS (SW)
-    BEGIN
-        CASE SW(9 DOWNTO 8) IS
-            WHEN "00" => 
-                HEX3 <= "1000010";
-                HEX2 <= "0110000";
-                HEX1 <= "1001111";
-                HEX0 <= "0000001";
-                
-            WHEN "01" => 
-                HEX3 <= "0110000";
-                HEX2 <= "1001111";
-                HEX1 <= "0000001";
-                HEX0 <= "1000010";
-                
-            WHEN "10" => 
-                HEX3 <= "1001111";
-                HEX2 <= "0000001";
-                HEX1 <= "1000010";
-                HEX0 <= "0110000";
-					 
-				WHEN "11" => 
-                HEX3 <= "0000001";
-                HEX2 <= "1000010";
-                HEX1 <= "0110000";
-                HEX0 <= "1001111";
-
-            WHEN OTHERS =>
-                HEX3 <= "1111111";
-                HEX2 <= "1111111";
-                HEX1 <= "1111111";
-                HEX0 <= "1111111";
-        END CASE;
-    END PROCESS;
-
-    LEDR <= SW;  -- Directly connecting the switches to the red LEDs
- 
+	LEDR <= SW;  -- Directly connecting the switches to the red LEDs
 
 END Behavior;
+
