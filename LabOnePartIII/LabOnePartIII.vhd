@@ -1,8 +1,16 @@
+--Lab One - Part II
+
+--Students:
+--	Hansen Shamoon 
+--	Deepak Neupane
+	
+-- In this lab, we create a 2 bit wide 4-to-1 multiplexer, the 2 select inputs
+-- are connected Switches 9-8 and switches 7-0 for four 2 bit inputs to the 
+-- multiplexer
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-
--- Simple entity that connects the SW switches to the LEDR lights 
 -- Part 1 code --
 ENTITY LabOnePartIII IS
     PORT (
