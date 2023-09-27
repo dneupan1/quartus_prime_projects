@@ -1,3 +1,14 @@
+
+--Lab One - Part I
+
+--Students:
+--	Hansen Shamoon 
+--	Deepak Neupane
+	
+--This program simply connects the switches to the LED lights.
+--If the switch is high, the LED lights up, else the LED is turned off.
+
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
