@@ -1,3 +1,12 @@
+--Lab One - Part II
+
+--Students:
+--	Hansen Shamoon 
+--	Deepak Neupane
+	
+-- 
+
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
  
