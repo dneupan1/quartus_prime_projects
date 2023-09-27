@@ -76,14 +76,24 @@ ARCHITECTURE Behavior OF LabOnePartV IS
 
     SIGNAL M0, M1, M2, M3 : STD_LOGIC_VECTOR(1 DOWNTO 0);
 
-
 BEGIN
-	U0: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(5 DOWNTO 4), SW(3 DOWNTO 2), SW(1 DOWNTO 0), M0);
-	
-	H0: char_7seg PORT MAP (M0, HEX0);
+    -- For HEX0
+    U0: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(1 DOWNTO 0), SW(3 DOWNTO 2), SW(5 DOWNTO 4), SW(7 DOWNTO 6), M0);
+    H0: char_7seg PORT MAP (M0, HEX0);
 
+    -- For HEX1
+    U1: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(3 DOWNTO 2), SW(5 DOWNTO 4), SW(7 DOWNTO 6), SW(1 DOWNTO 0), M1);
+    H1: char_7seg PORT MAP (M1, HEX1);
 
-	LEDR <= SW;  -- Directly connecting the switches to the red LEDs
+    -- For HEX2
+    U2: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(5 DOWNTO 4), SW(7 DOWNTO 6), SW(1 DOWNTO 0), SW(3 DOWNTO 2), M2);
+    H2: char_7seg PORT MAP (M2, HEX2);
+
+    -- For HEX3
+    U3: mux_2bit_4to1 PORT MAP (SW(9 DOWNTO 8), SW(7 DOWNTO 6), SW(1 DOWNTO 0), SW(3 DOWNTO 2), SW(5 DOWNTO 4), M3);
+    H3: char_7seg PORT MAP (M3, HEX3);
+
+    LEDR <= SW;  -- Directly connecting the switches to the red LEDs
 
 END Behavior;
 
