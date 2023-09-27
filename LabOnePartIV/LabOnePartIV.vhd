@@ -1,8 +1,16 @@
+--Lab One - Part IV
+
+--Students:
+--	Hansen Shamoon 
+--	Deepak Neupane
+	
+-- The objective of this part is to display a character on a 7-segment 
+-- display. The specific character displayed de- pends on a two-bit input
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
 
--- Simple entity that connects the SW switches to the LEDR lights 
 -- Part 1 code --
 ENTITY LabOnePartIV IS
     PORT (
