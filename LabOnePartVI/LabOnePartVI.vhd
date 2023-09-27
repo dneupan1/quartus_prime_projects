@@ -1,6 +1,16 @@
+--Lab One - Part VI
+
+--Students:
+--	Hansen Shamoon 
+--	Deepak Neupane
+	
+-- Implemening 6-to-1 multiplexers using 3 bit wide inputs. The outputs are 
+-- rotated in the 6 HEX displays in DE1-SoC board based on inputs from 
+-- switches 9-7
+
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
- 
 
 
 ENTITY LabOnePartVI IS
