@@ -1,10 +1,11 @@
---Lab One - Part II
+--Lab One - Part V
 
 --Students:
 --	Hansen Shamoon 
 --	Deepak Neupane
 	
--- 
+-- This program implements ttwo bit wide 4-to-1 multiplexers to display
+-- and shift characters displayed on the 7 segment display
 
 
 LIBRARY ieee;
