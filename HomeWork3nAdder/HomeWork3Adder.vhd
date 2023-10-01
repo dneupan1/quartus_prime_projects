@@ -20,7 +20,7 @@ entity adder_subtractor is
         add_sub : in std_logic; -- '0' for addition, '1' for subtraction
         x : in std_logic_vector(N-1 downto 0);
         y : in std_logic_vector(N-1 downto 0);
-        result : out std_logic_vector(N-1 downto 0);
+        result : out std_logic_vector(N-1 downto 0)
     );
 end entity adder_subtractor;
 
