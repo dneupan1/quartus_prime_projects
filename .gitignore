@@ -3,3 +3,8 @@
 */simulation/*
 */output_files/*
 */*.bak
+*/*/db/*
+*/*/incremental_db/*
+*/*/simulation/*
+*/*/output_files/*
+*/*/*.bak

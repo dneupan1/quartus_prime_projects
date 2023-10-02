@@ -1,0 +1,44 @@
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+# File: C:\Users\Deepak\Documents\MastersDegree\EmbeddedSystems\QuartusProjects\quartus_prime_projects\LabTwo\LabTwoPartI\LabTwoPartI.csv
+# Generated on: Mon Oct  2 15:23:46 2023
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+HEX0[0],Output,PIN_AE26,5A,B5A_N0,PIN_V25,,,,,,,,,,,,,,
+HEX0[1],Output,PIN_AE27,5A,B5A_N0,PIN_AC29,,,,,,,,,,,,,,
+HEX0[2],Output,PIN_AE28,5A,B5A_N0,PIN_AD26,,,,,,,,,,,,,,
+HEX0[3],Output,PIN_AG27,5A,B5A_N0,PIN_W24,,,,,,,,,,,,,,
+HEX0[4],Output,PIN_AF28,5A,B5A_N0,PIN_AC27,,,,,,,,,,,,,,
+HEX0[5],Output,PIN_AG28,5A,B5A_N0,PIN_W25,,,,,,,,,,,,,,
+HEX0[6],Output,PIN_AH28,5A,B5A_N0,PIN_AG30,,,,,,,,,,,,,,
+HEX1[0],Output,PIN_AJ29,5A,B5A_N0,PIN_AD29,,,,,,,,,,,,,,
+HEX1[1],Output,PIN_AH29,5A,B5A_N0,PIN_AD30,,,,,,,,,,,,,,
+HEX1[2],Output,PIN_AH30,5A,B5A_N0,PIN_Y27,,,,,,,,,,,,,,
+HEX1[3],Output,PIN_AG30,5A,B5A_N0,PIN_AC30,,,,,,,,,,,,,,
+HEX1[4],Output,PIN_AF29,5A,B5A_N0,PIN_Y26,,,,,,,,,,,,,,
+HEX1[5],Output,PIN_AF30,5A,B5A_N0,PIN_AB27,,,,,,,,,,,,,,
+HEX1[6],Output,PIN_AD27,5A,B5A_N0,PIN_AE29,,,,,,,,,,,,,,
+SW[0],Input,PIN_AB12,3A,B3A_N0,PIN_AH30,,,,,,,,,,,,,,
+SW[1],Input,PIN_AC12,3A,B3A_N0,PIN_V23,,,,,,,,,,,,,,
+SW[2],Input,PIN_AF9,3A,B3A_N0,PIN_AF30,,,,,,,,,,,,,,
+SW[3],Input,PIN_AF10,3A,B3A_N0,PIN_AF29,,,,,,,,,,,,,,
+SW[4],Input,PIN_AD11,3A,B3A_N0,PIN_AB28,,,,,,,,,,,,,,
+SW[5],Input,PIN_AD12,3A,B3A_N0,PIN_AB30,,,,,,,,,,,,,,
+SW[6],Input,PIN_AE11,3A,B3A_N0,PIN_AA26,,,,,,,,,,,,,,
+SW[7],Input,PIN_AC9,3A,B3A_N0,PIN_AA28,,,,,,,,,,,,,,
