@@ -25,7 +25,6 @@ BEGIN
     s <= (a xor b) xor ci;
 
     -- Carry out logic incomplete
-	 
     co <= (b and ci);
 END Behavioral;
 
