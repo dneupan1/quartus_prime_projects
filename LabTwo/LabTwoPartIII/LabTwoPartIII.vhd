@@ -34,8 +34,7 @@ ARCHITECTURE Behavioral of LabTwoPartIII is
 BEGIN
     c(0) <= Cin;
 
-    FA0: FullAdder port map(a => A(0), b => B(0), ci => c(0), s => Sum(0), co => c(1));
-	 
+    FA0: FullAdder port map(a => A(0), b => B(0), ci => c(0), s => Sum(0), co => c(1));	 
     FA1: FullAdder port map(a => A(1), b => B(1), ci => c(1), s => Sum(1), co => c(2));
     FA2: FullAdder port map(a => A(2), b => B(2), ci => c(2), s => Sum(2), co => c(3));
     FA3: FullAdder port map(a => A(3), b => B(3), ci => c(3), s => Sum(3), co => c(4));
