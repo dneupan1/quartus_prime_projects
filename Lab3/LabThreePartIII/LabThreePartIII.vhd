@@ -1,27 +1,20 @@
---Lab Three Part III
-
---Students:
---	Hansen Shamoon 
---	Deepak Neupane
-
--- 
---
-
-LIBRARY ieee;
-USE IEEE.STD_LOGIC_1164.ALL;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
 
-ENTITY LabThreePartIII is
-    PORT (  SW: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-				clock: IN STD_LOGIC;
-				reset: IN STD_LOGIC; -- active-low asynchronous reset
-				Cout: OUT STD_LOGIC;
-				HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: OUT STD_LOGIC_VECTOR(0 TO 6));
-END LabThreePartIII;
+entity LabThreePartIII is
+    Port (
+        KEY0 : in STD_LOGIC; -- Active-low reset
+        KEY1 : in STD_LOGIC; -- Clock input
+        SW   : in STD_LOGIC_VECTOR(7 downto 0); -- Input switches
+        HEX1, HEX0, HEX2, HEX3, HEX4, HEX5, HEX6 : out STD_LOGIC_VECTOR(0 to 6);
+        LEDR : out STD_LOGIC_VECTOR(7 downto 0)
+    );
+end LabThreePartIII;
 
-ARCHITECTURE Behavior of LabThreePartIII is
-	FUNCTION to_7segment (bin : integer) RETURN STD_LOGIC_VECTOR IS
+architecture Behavioral of LabThreePartIII is
+FUNCTION to_7segment (bin : integer) RETURN STD_LOGIC_VECTOR IS
 		VARIABLE segment_pattern : STD_LOGIC_VECTOR(6 DOWNTO 0);
 		BEGIN
 			 -- Default to blank display
@@ -49,32 +42,29 @@ ARCHITECTURE Behavior of LabThreePartIII is
 		RETURN segment_pattern;
 	END FUNCTION to_7segment;
 	
-	COMPONENT BinToHexDisplay 
-			PORT (binaryInput	:	IN	STD_LOGIC_VECTOR(3 downto 0);
-					hexDisplayOutput	:	OUT STD_LOGIC_VECTOR(6 downto 0));
-	END COMPONENT;
-	COMPONENT IntToHexDisplay 
-			PORT (intInput	:	IN	integer;
-					hexDisplayOutput	:	OUT STD_LOGIC_VECTOR(6 downto 0));
-	END COMPONENT;
-	
-	SIGNAL A: STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
-	SIGNAL B: STD_LOGIC_VECTOR(7 DOWNTO 0) := "00000000";
-	SIGNAL SUM: STD_LOGIC_VECTOR(8 DOWNTO 0) := "000000000";
-BEGIN
-	A <= SW(7 DOWNTO 0);
-	B <= SW(7 DOWNTO 0);
-	
-	SUM <= std_logic_vector(unsigned("0" & A) + unsigned("0" & B));
-	Cout <= SUM(8);
-	
-	display_logic: PROCESS(A, B, SUM, SW)
-	BEGIN
-		-- need some kind of logic to store values here
-		
-	END PROCESS;
-	
-	-- take 8 bit inputs store in A, display in HEX3-2
+    signal A, B : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
+	 signal S : STD_LOGIC_VECTOR(8 downto 0) := "000000000";
+    signal carryout : STD_LOGIC;
+begin
+    process(KEY0, KEY1, S, SW)
+    begin
+        if KEY0 = '0' then
+            -- Reset
+            A <= (others => '0');
+            B <= (others => '0');
+				S <= (others => '0');
+            carryout <= '0';
+        elsif rising_edge(KEY1) then
+            -- Clock input
+            B <= A; -- Store A in B
+				A <= SW;
+            S <= (others => '0'); -- Clear S
+				S <= std_logic_vector(unsigned("0" & A) + unsigned("0" & B));
+				carryout <= S(8);
+        end if;
+    end process;
+
+    -- take 8 bit inputs store in A, display in HEX3-2
 	HEX2 <= to_7segment(to_integer(unsigned(A(3 DOWNTO 0))));
 	HEX3 <= to_7segment(to_integer(unsigned(A(7 DOWNTO 4))));
 	
@@ -83,8 +73,9 @@ BEGIN
 	HEX1 <= to_7segment(to_integer(unsigned(B(7 DOWNTO 4))));
 	
 	-- Add the two numbers and store in S, display in HEX 5-4, show Cout in LEDR(0)
-	HEX4 <= to_7segment(to_integer(unsigned(SUM(3 DOWNTO 0))));
-	HEX5 <= to_7segment(to_integer(unsigned(SUM(7 DOWNTO 4))));
-	
-	
-END Behavior;
+	HEX4 <= to_7segment(to_integer(unsigned(S(3 DOWNTO 0))));
+	HEX5 <= to_7segment(to_integer(unsigned(S(7 DOWNTO 4))));
+
+    --carryout signal to LEDR(0)
+    LEDR <= "00000001" when carryout = '1' else "00000000";
+end Behavioral;
