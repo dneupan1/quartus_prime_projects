@@ -4,7 +4,10 @@
 --	Hansen Shamoon 
 --	Deepak Neupane
 
---
+--Lab 2 Part III
+--In this lab, we implement a full adder circuit. The inputs for the two binary inputs are 
+-- taken from switches SW0-7 and they are added. The outputs are displayed onto the LEDs in
+-- the DE1SoC board.
 --
 
 

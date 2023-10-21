@@ -45,7 +45,10 @@ FUNCTION to_7segment (bin : integer) RETURN STD_LOGIC_VECTOR IS
     signal A, B : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 	 signal S : STD_LOGIC_VECTOR(8 downto 0) := "000000000";
     signal carryout : STD_LOGIC;
+	 signal A_saved: STD_LOGIC := '0';
 begin
+	 A <= SW;
+	 
     process(KEY0, KEY1, S, SW)
     begin
         if KEY0 = '0' then
@@ -54,11 +57,13 @@ begin
             B <= (others => '0');
 				S <= (others => '0');
             carryout <= '0';
+				A_saved <= '0';
         elsif rising_edge(KEY1) then
             -- Clock input
-            B <= A; -- Store A in B
+				B <= A; -- Store A in B
 				A <= SW;
             S <= (others => '0'); -- Clear S
+
 				S <= std_logic_vector(unsigned("0" & A) + unsigned("0" & B));
 				carryout <= S(8);
         end if;
