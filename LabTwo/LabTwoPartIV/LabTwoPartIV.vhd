@@ -4,7 +4,8 @@
 --	Hansen Shamoon 
 --	Deepak Neupane
 
---
+-- This circuit implements a circuit that has two decimal digits X and Y. The sum
+-- of these inputs are displayed onto the hex displays.
 --
 
 
