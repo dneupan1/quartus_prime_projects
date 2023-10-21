@@ -4,7 +4,8 @@
 --	Hansen Shamoon 
 --	Deepak Neupane
 
---
+-- This lab is to implement an alternate approach to four bit numbers and
+-- displaying them in the hex display.
 --
 
 
