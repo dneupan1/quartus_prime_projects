@@ -61,14 +61,14 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AB12 -to Input
-set_location_assignment PIN_AC12 -to Input1
+set_location_assignment PIN_AD11 -to Input1
 set_location_assignment PIN_AD10 -to Input2
-set_location_assignment PIN_AF10 -to Input3
-set_location_assignment PIN_AD11 -to Input4
-set_location_assignment PIN_AD12 -to Input5
+set_location_assignment PIN_AC12 -to Input3
+set_location_assignment PIN_AD12 -to Input4
+set_location_assignment PIN_AF9 -to Input5
 set_location_assignment PIN_AE11 -to Input6
-set_location_assignment PIN_AC9 -to Input7
-set_location_assignment PIN_AF9 -to Input8
+set_location_assignment PIN_AF10 -to Input7
+set_location_assignment PIN_AC9 -to Input8
 set_location_assignment PIN_V16 -to Outport1
 set_location_assignment PIN_W16 -to Outport2
 set_location_assignment PIN_V17 -to Outport3
