@@ -4,7 +4,8 @@
 --	Hansen Shamoon 
 --	Deepak Neupane
 
--- 
+-- In this circuit, we implement a gated D-Latch , a positive-edge triggered D flipflop and
+-- a negative edge triggered DFlipFlop in VHDL.
 --
 
 LIBRARY ieee ;

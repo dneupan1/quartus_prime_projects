@@ -1,3 +1,14 @@
+--Lab Three Part III
+
+--Students:
+--	Hansen Shamoon 
+--	Deepak Neupane
+
+-- we had to take an 8bit input from the switches, save the hexadecimal value into a variables, 
+-- take a second 8 bit input from the switches, save that hexadecimal value into another variable, 
+-- add the two inputs and display the sum in the hexadecimal display. 
+-- If there is any carry over from the operation, we have to show that in LED0
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
@@ -43,9 +54,9 @@ FUNCTION to_7segment (bin : integer) RETURN STD_LOGIC_VECTOR IS
 	END FUNCTION to_7segment;
 	
     signal A, B : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
-	 signal S : STD_LOGIC_VECTOR(8 downto 0) := "000000000";
+	signal S : STD_LOGIC_VECTOR(8 downto 0) := "000000000";
     signal carryout : STD_LOGIC;
-	 signal A_saved: STD_LOGIC := '0';
+	signal A_saved: STD_LOGIC := '0';
 begin
 	 A <= SW;
 	 
