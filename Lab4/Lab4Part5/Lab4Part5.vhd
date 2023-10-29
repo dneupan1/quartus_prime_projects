@@ -40,10 +40,11 @@ BEGIN
 				IF timer = 49999999 THEN -- for a 50 MHz clock frequency
 					timer <= 0;
 					current_display <= current_display + 1;
-					IF current_display > 7 THEN
-						current_display <= 0;
-					END IF;
+					
 				END IF;
+		  END IF;
+	     IF current_display > 7 THEN
+				current_display <= 0;
 		  END IF;
         CASE current_display IS
             WHEN 0 =>
