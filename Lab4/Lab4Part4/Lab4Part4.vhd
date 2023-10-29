@@ -89,7 +89,7 @@ BEGIN
 					M1 <= var_M1;
 					M2 <= var_M2;
 					M3 <= var_M3;
-					END IF;
+				END IF;
 		  END IF;
 		 END PROCESS;
 
