@@ -19,14 +19,14 @@
 #
 # Quartus Prime
 # Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-# Date created = 18:24:47  October 28, 2023
+# Date created = 18:27:30  November 03, 2023
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		Lab4Part1_assignment_defaults.qdf
+#		Lab4Part2_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -39,9 +39,9 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY Lab4Part1
+set_global_assignment -name TOP_LEVEL_ENTITY Lab4Part2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:24:47  OCTOBER 28, 2023"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:27:30  NOVEMBER 03, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
@@ -52,4 +52,3 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VHDL_FILE Lab4Part1.vhd
