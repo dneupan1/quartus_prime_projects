@@ -95,18 +95,21 @@ ARCHITECTURE arch OF Lab4Part1 IS
     SIGNAL T: std_logic_vector(0 to 7) := "00000000";
 
 BEGIN
-    T <= (en, en and cnt(0), T(1) and cnt(1), T(2) and cnt(2),
-          T(3) and cnt(3), T(4) and cnt(4), T(5) and cnt(5), T(6) and cnt(6));
+	IF reset = '1' THEN
+		cnt <= "00000000";
 
-    TFF_0: component tff_temp    port map (Q => cnt(0), T => T(0), Clock => clk, Clear => reset );
-	 TFF_1: component tff_temp    port map (Q => cnt(1), T => T(1), Clock => clk, Clear => reset );
-    TFF_2: component tff_temp    port map (Q => cnt(2), T => T(2), Clock => clk, Clear => reset );
-    TFF_3: component tff_temp    port map (Q => cnt(3), T => T(3), Clock => clk, Clear => reset );
-    TFF_4: component tff_temp    port map (Q => cnt(4), T => T(4), Clock => clk, Clear => reset );
-    TFF_5: component tff_temp    port map (Q => cnt(5), T => T(5), Clock => clk, Clear => reset );	 
-    TFF_6: component tff_temp    port map (Q => cnt(6), T => T(6), Clock => clk, Clear => reset );	 
-    TFF_7: component tff_temp    port map (Q => cnt(7), T => T(7), Clock => clk, Clear => reset );	 
-	 
+	T <= (en, en and cnt(0), T(1) and cnt(1), T(2) and cnt(2),
+		 T(3) and cnt(3), T(4) and cnt(4), T(5) and cnt(5), T(6) and cnt(6));
+
+	TFF_0: component tff_temp    port map (Q => cnt(0), T => T(0), Clock => clk, Clear => reset );
+	TFF_1: component tff_temp    port map (Q => cnt(1), T => T(1), Clock => clk, Clear => reset );
+	TFF_2: component tff_temp    port map (Q => cnt(2), T => T(2), Clock => clk, Clear => reset );
+	TFF_3: component tff_temp    port map (Q => cnt(3), T => T(3), Clock => clk, Clear => reset );
+	TFF_4: component tff_temp    port map (Q => cnt(4), T => T(4), Clock => clk, Clear => reset );
+	TFF_5: component tff_temp    port map (Q => cnt(5), T => T(5), Clock => clk, Clear => reset );	 
+	TFF_6: component tff_temp    port map (Q => cnt(6), T => T(6), Clock => clk, Clear => reset );	 
+	TFF_7: component tff_temp    port map (Q => cnt(7), T => T(7), Clock => clk, Clear => reset );	 
+ 
 	HEX0 <= to_7segment(cnt(0 to 3));
 	HEX1 <= to_7segment(cnt(4 to 7));
 
