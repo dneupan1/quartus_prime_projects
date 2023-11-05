@@ -15,25 +15,27 @@
 
 # Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 # File: C:\Users\Deepak\Documents\MastersDegree\EmbeddedSystems\QuartusProjects\quartus_prime_projects\Lab4\Lab4Part1\Lab4Part1.csv
-# Generated on: Fri Nov  3 22:00:47 2023
+# Generated on: Sat Nov  4 22:34:22 2023
 
 # Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
 
-To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
-clk,Input,PIN_AA15,3B,B3B_N0,PIN_Y27,,,,,,,,,,,,,,
-en,Input,PIN_AC12,3A,B3A_N0,PIN_AA26,,,,,,,,,,,,,,
-HEX0[0],Output,PIN_AE26,5A,B5A_N0,PIN_AB28,,,,,,,,,,,,,,
-HEX0[1],Output,PIN_AE27,5A,B5A_N0,PIN_AA28,,,,,,,,,,,,,,
-HEX0[2],Output,PIN_AE28,5A,B5A_N0,PIN_AB30,,,,,,,,,,,,,,
-HEX0[3],Output,PIN_AG27,5A,B5A_N0,PIN_AE29,,,,,,,,,,,,,,
-HEX0[4],Output,PIN_AF28,5A,B5A_N0,PIN_Y26,,,,,,,,,,,,,,
-HEX0[5],Output,PIN_AG28,5A,B5A_N0,PIN_AA30,,,,,,,,,,,,,,
-HEX0[6],Output,PIN_AH28,5A,B5A_N0,PIN_AC30,,,,,,,,,,,,,,
-HEX1[0],Output,PIN_AJ29,5A,B5A_N0,PIN_AG30,,,,,,,,,,,,,,
-HEX1[1],Output,PIN_AH29,5A,B5A_N0,PIN_AH30,,,,,,,,,,,,,,
-HEX1[2],Output,PIN_AH30,5A,B5A_N0,PIN_V25,,,,,,,,,,,,,,
-HEX1[3],Output,PIN_AG30,5A,B5A_N0,PIN_W25,,,,,,,,,,,,,,
-HEX1[4],Output,PIN_AF29,5A,B5A_N0,PIN_AB27,,,,,,,,,,,,,,
-HEX1[5],Output,PIN_AF30,5A,B5A_N0,PIN_AC28,,,,,,,,,,,,,,
-HEX1[6],Output,PIN_AD27,5A,B5A_N0,PIN_AC29,,,,,,,,,,,,,,
-reset,Input,PIN_AB12,3A,B3A_N0,PIN_AD29,,,,,,,,,,,,,,
+To,Direction,Location,I/O Bank,VREF Group,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+Clear,Input,PIN_AB12,3A,B3A_N0,,,,,,,,,,,,,,
+Clock,Input,PIN_AA15,3B,B3B_N0,,,,,,,,,,,,,,
+en,Input,PIN_AC12,3A,B3A_N0,,,,,,,,,,,,,,
+HEX0[0],Output,PIN_AE26,5A,B5A_N0,,,,,,,,,,,,,,
+HEX0[1],Output,PIN_AE27,5A,B5A_N0,,,,,,,,,,,,,,
+HEX0[2],Output,PIN_AE28,5A,B5A_N0,,,,,,,,,,,,,,
+HEX0[3],Output,PIN_AG27,5A,B5A_N0,,,,,,,,,,,,,,
+HEX0[4],Output,PIN_AF28,5A,B5A_N0,,,,,,,,,,,,,,
+HEX0[5],Output,PIN_AG28,5A,B5A_N0,,,,,,,,,,,,,,
+HEX0[6],Output,PIN_AH28,5A,B5A_N0,,,,,,,,,,,,,,
+HEX1[0],Output,PIN_AJ29,5A,B5A_N0,,,,,,,,,,,,,,
+HEX1[1],Output,PIN_AH29,5A,B5A_N0,,,,,,,,,,,,,,
+HEX1[2],Output,PIN_AH30,5A,B5A_N0,,,,,,,,,,,,,,
+HEX1[3],Output,PIN_AG30,5A,B5A_N0,,,,,,,,,,,,,,
+HEX1[4],Output,PIN_AF29,5A,B5A_N0,,,,,,,,,,,,,,
+HEX1[5],Output,PIN_AF30,5A,B5A_N0,,,,,,,,,,,,,,
+HEX1[6],Output,PIN_AD27,5A,B5A_N0,,,,,,,,,,,,,,
+reset,Unknown,,,,,,,,,,,,,,,,,
+clk,Unknown,,,,,,,,,,,,,,,,,

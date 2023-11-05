@@ -10,14 +10,14 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY tff_temp IS
-    PORT (
+entity tff_temp is
+    port(
         Q: out STD_LOGIC;
         T: IN STD_LOGIC;
         Clock: IN STD_LOGIC;
         Clear: IN STD_LOGIC
     );
-END tff_temp;
+end tff_temp;
 
 architecture arc_T_ff of tff_temp is
     signal Q_temp: std_logic;
@@ -40,26 +40,26 @@ end arc_T_ff;
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY Lab4Part1 IS
-    PORT (
-        clk: IN std_logic;
-        reset: IN std_logic;
-        en: IN std_logic;
-		  HEX0,HEX1: OUT STD_LOGIC_VECTOR(0 to 6)
+entity Lab4Part1 is
+    port (
+        Clock: in std_logic;
+        Clear: in std_logic;
+        en: in std_logic;
+		  HEX0,HEX1: out STD_LOGIC_VECTOR(0 to 6)
     );
-END ENTITY Lab4Part1;
+end entity;
 
 
-ARCHITECTURE arch OF Lab4Part1 IS
+architecture foo of Lab4Part1 is
 
-    COMPONENT tff_temp IS	 
-		 PORT(
-			  Q: out STD_LOGIC;
-			  T: IN STD_LOGIC;
-			  Clock: IN STD_LOGIC;
-			  Clear: IN STD_LOGIC
-		 );
-    END COMPONENT;
+    component tff_temp is	 
+    port(
+        Q: out STD_LOGIC;
+        T: IN STD_LOGIC;
+        Clock: IN STD_LOGIC;
+        Clear: IN STD_LOGIC
+    );
+    end component;
 
 
 	FUNCTION to_7segment (bin : STD_LOGIC_VECTOR(0 to 3))	RETURN STD_LOGIC_VECTOR IS
@@ -90,27 +90,27 @@ ARCHITECTURE arch OF Lab4Part1 IS
 		RETURN segment_pattern;
 	END FUNCTION to_7segment;
 	
+	signal cnt: std_logic_vector(0 to 7);
+	signal T: std_logic_vector(0 to 7);
+
+begin
+	process (Clock, Clear)
+	BEGIN
+    T <= (en, en and cnt(0), T(1) and cnt(1), T(2) and cnt(2),
+          T(3) and cnt(3), T(4) and cnt(4), T(5) and cnt(5), T(6) and cnt(6));	 
+	 
+	end process;
 	
-    SIGNAL cnt: std_logic_vector(0 to 7) := "00000000";
-    SIGNAL T: std_logic_vector(0 to 7) := "00000000";
+	TFF_0: tff_temp port map (Q => cnt(0), T => T(0), Clock => Clock, Clear => Clear);
+	TFF_1: tff_temp port map (Q => cnt(1), T => T(1), Clock => Clock, Clear => Clear);
+	TFF_2: tff_temp port map (Q => cnt(2), T => T(2), Clock => Clock, Clear => Clear);
+	TFF_3: tff_temp port map (Q => cnt(3), T => T(3), Clock => Clock, Clear => Clear);
+	TFF_4: tff_temp port map (Q => cnt(4), T => T(4), Clock => Clock, Clear => Clear);
+	TFF_5: tff_temp port map (Q => cnt(5), T => T(5), Clock => Clock, Clear => Clear);	 
+	TFF_6: tff_temp port map (Q => cnt(6), T => T(6), Clock => Clock, Clear => Clear);	 
+	TFF_7: tff_temp port map (Q => cnt(7), T => T(7), Clock => Clock, Clear => Clear);
+	
+	HEX0 <= to_7segment(T(0 to 3));
+	HEX1 <= to_7segment(T(4 to 7));
 
-BEGIN
-	IF reset = '1' THEN
-		cnt <= "00000000";
-
-	T <= (en, en and cnt(0), T(1) and cnt(1), T(2) and cnt(2),
-		 T(3) and cnt(3), T(4) and cnt(4), T(5) and cnt(5), T(6) and cnt(6));
-
-	TFF_0: component tff_temp    port map (Q => cnt(0), T => T(0), Clock => clk, Clear => reset );
-	TFF_1: component tff_temp    port map (Q => cnt(1), T => T(1), Clock => clk, Clear => reset );
-	TFF_2: component tff_temp    port map (Q => cnt(2), T => T(2), Clock => clk, Clear => reset );
-	TFF_3: component tff_temp    port map (Q => cnt(3), T => T(3), Clock => clk, Clear => reset );
-	TFF_4: component tff_temp    port map (Q => cnt(4), T => T(4), Clock => clk, Clear => reset );
-	TFF_5: component tff_temp    port map (Q => cnt(5), T => T(5), Clock => clk, Clear => reset );	 
-	TFF_6: component tff_temp    port map (Q => cnt(6), T => T(6), Clock => clk, Clear => reset );	 
-	TFF_7: component tff_temp    port map (Q => cnt(7), T => T(7), Clock => clk, Clear => reset );	 
- 
-	HEX0 <= to_7segment(cnt(0 to 3));
-	HEX1 <= to_7segment(cnt(4 to 7));
-
-END ARCHITECTURE arch;
+end architecture;
