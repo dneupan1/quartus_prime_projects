@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.348050456">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.348050456" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.arm.eclipse.builder.armcc.error" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="clean" description="" id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.348050456" name="Debug" parent="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6">
+					<folderInfo id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.348050456." name="/" resourcePath="">
+						<toolChain id="com.arm.toolchain.v6.exe.debug.base.var.arm_compiler_6-6.666984984" name="Arm Compiler for Embedded 6" superClass="com.arm.toolchain.v6.exe.debug.base.var.arm_compiler_6-6">
+							<option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.std" id="com.arm.toolchain.v6.base.options.debug.level.335121680" name="Debug Level" superClass="com.arm.toolchain.v6.base.options.debug.level" valueType="enumerated"/>
+							<option id="com.arm.toolchain.v6.base.options.target.cpu_fpu.992965601" superClass="com.arm.toolchain.v6.base.options.target.cpu_fpu" value="Cortex-A9.NoFPU" valueType="string"/>
+							<option id="com.arm.toolchain.v6.base.options.floatabi.584160890" name="Float ABI" superClass="com.arm.toolchain.v6.base.options.floatabi" value="com.arm.tool.c.compiler.v6.base.option.floatabi.soft" valueType="enumerated"/>
+							<option id="com.arm.toolchain.v6.base.options.inst.1250848282" name="Instruction set" superClass="com.arm.toolchain.v6.base.options.inst" value="com.arm.tool.c.compiler.v6.base.option.inst.arm" valueType="enumerated"/>
+							<targetPlatform id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.348050456..682005501" name=""/>
+							<builder buildPath="${workspace_loc:/Lab6}/Debug" id="com.arm.toolchain.v6.builder.1895701339" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.arm.toolchain.v6.builder"/>
+							<tool id="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6.1694871617" name="Arm C Compiler for Embedded 6" superClass="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6">
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.min" id="com.arm.tool.c.compiler.v6.base.option.optlevel.398520089" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.std" id="com.arm.tool.c.compiler.v6.base.options.debug.level.1463869098" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+								<option id="com.arm.tool.c.compiler.v6.base.option.cpu.1068839962" name="CPU (-mcpu)" superClass="com.arm.tool.c.compiler.v6.base.option.cpu" useByScannerDiscovery="true" value="cortex-a9" valueType="string"/>
+								<option id="com.arm.tool.c.compiler.v6.base.option.target.655877076" name="Target (--target)" superClass="com.arm.tool.c.compiler.v6.base.option.target" useByScannerDiscovery="true" value="arm-arm-none-eabi" valueType="string"/>
+								<option id="com.arm.tool.c.compiler.v6.base.option.fpu.225109531" name="FPU (-mfpu)" superClass="com.arm.tool.c.compiler.v6.base.option.fpu" useByScannerDiscovery="true" value="none" valueType="string"/>
+								<option id="com.arm.tool.c.compiler.v6.base.option.floatabi.1785394917" name="Float ABI (-mfloat-abi)" superClass="com.arm.tool.c.compiler.v6.base.option.floatabi" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.floatabi.soft" valueType="enumerated"/>
+								<option id="com.arm.tool.c.compiler.v6.base.option.inst.1989562610" name="Instruction set" superClass="com.arm.tool.c.compiler.v6.base.option.inst" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.inst.arm" valueType="enumerated"/>
+								<inputType id="com.arm.tool.c.compiler.v6.base.input.1526541338" superClass="com.arm.tool.c.compiler.v6.base.input"/>
+							</tool>
+							<tool id="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6.891923220" name="Arm C++ Compiler for Embedded 6" superClass="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6">
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.min" id="com.arm.tool.c.compiler.v6.base.option.optlevel.323000331" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.std" id="com.arm.tool.c.compiler.v6.base.options.debug.level.584244977" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+							</tool>
+							<tool id="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6.260106591" name="Arm Assembler 6" superClass="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6">
+								<option defaultValue="com.arm.tool.assembler.v6.base.options.debug.level.std" id="com.arm.tool.assembler.v6.base.options.debug.level.917047548" name="Debug Level" superClass="com.arm.tool.assembler.v6.base.options.debug.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="com.arm.tool.assembler.v6.base.option.cpu.1226456926" name="CPU (-mcpu)" superClass="com.arm.tool.assembler.v6.base.option.cpu" useByScannerDiscovery="false" value="cortex-a9" valueType="string"/>
+								<option id="com.arm.tool.assembler.v6.base.option.target.1862228395" name="Target (--target)" superClass="com.arm.tool.assembler.v6.base.option.target" useByScannerDiscovery="false" value="arm-arm-none-eabi" valueType="string"/>
+								<option id="com.arm.tool.assembler.v6.base.option.fpu.2056219994" name="FPU (-mfpu)" superClass="com.arm.tool.assembler.v6.base.option.fpu" useByScannerDiscovery="true" value="none" valueType="string"/>
+								<option id="com.arm.tool.assembler.v6.base.option.floatabi.1382935795" name="Float ABI (-mfloat-abi)" superClass="com.arm.tool.assembler.v6.base.option.floatabi" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.floatabi.soft" valueType="enumerated"/>
+								<option id="com.arm.tool.assembler.v6.base.option.inst.1785243270" name="Instruction set" superClass="com.arm.tool.assembler.v6.base.option.inst" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.inst.arm" valueType="enumerated"/>
+								<inputType id="com.arm.tool.assembler.v6.base.input.707948279" superClass="com.arm.tool.assembler.v6.base.input"/>
+							</tool>
+							<tool id="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6.1682926806" name="Arm Linker 6" superClass="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6">
+								<option id="com.arm.tool.c.linker.option.robase.1298589808" name="RO base address (--ro_base)" superClass="com.arm.tool.c.linker.option.robase" useByScannerDiscovery="false" value="0x80000000" valueType="string"/>
+							</tool>
+							<tool id="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6.2010588122" name="Arm Librarian 6" superClass="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1876300258">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1876300258" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.arm.eclipse.builder.armcc.error" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="clean" description="" id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1876300258" name="Release" parent="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6">
+					<folderInfo id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1876300258." name="/" resourcePath="">
+						<toolChain id="com.arm.toolchain.v6.exe.release.base.var.arm_compiler_6-6.2004409258" name="Arm Compiler for Embedded 6" superClass="com.arm.toolchain.v6.exe.release.base.var.arm_compiler_6-6">
+							<option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.none" id="com.arm.toolchain.v6.base.options.debug.level.292900547" name="Debug Level" superClass="com.arm.toolchain.v6.base.options.debug.level" valueType="enumerated"/>
+							<targetPlatform id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1876300258..1189290338" name=""/>
+							<builder buildPath="${workspace_loc:/Lab6}/Release" id="com.arm.toolchain.v6.builder.2071321442" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.arm.toolchain.v6.builder"/>
+							<tool id="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6.881255716" name="Arm C Compiler for Embedded 6" superClass="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6">
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.high" id="com.arm.tool.c.compiler.v6.base.option.optlevel.2090950970" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.none" id="com.arm.tool.c.compiler.v6.base.options.debug.level.1834153411" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+								<inputType id="com.arm.tool.c.compiler.v6.base.input.1856969393" superClass="com.arm.tool.c.compiler.v6.base.input"/>
+							</tool>
+							<tool id="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6.2060319507" name="Arm C++ Compiler for Embedded 6" superClass="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6">
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.high" id="com.arm.tool.c.compiler.v6.base.option.optlevel.1343788621" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+								<option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.none" id="com.arm.tool.c.compiler.v6.base.options.debug.level.831705560" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+							</tool>
+							<tool id="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6.1190805885" name="Arm Assembler 6" superClass="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6">
+								<option defaultValue="com.arm.tool.assembler.v6.base.options.debug.level.none" id="com.arm.tool.assembler.v6.base.options.debug.level.1104965548" name="Debug Level" superClass="com.arm.tool.assembler.v6.base.options.debug.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<inputType id="com.arm.tool.assembler.v6.base.input.1174283821" superClass="com.arm.tool.assembler.v6.base.input"/>
+							</tool>
+							<tool id="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6.1967714455" name="Arm Linker 6" superClass="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6"/>
+							<tool id="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6.689859287" name="Arm Librarian 6" superClass="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="LabSix.com.arm.eclipse.build.project.v6.exe.base.var.arm_compiler_6-6.272073082" name="Executable" projectType="com.arm.eclipse.build.project.v6.exe.base.var.arm_compiler_6-6"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="com.arm.projectSettings" version="6.0.0"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="refreshScope"/>
+</cproject>
