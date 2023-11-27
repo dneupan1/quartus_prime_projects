@@ -1,0 +1,71 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\Deepak\Documents\MastersDegree\EmbeddedSystems\QuartusProjects\quartus_prime_projects\FinalProject\FinalProject.qsys --block-symbol-file --output-directory=C:\Users\Deepak\Documents\MastersDegree\EmbeddedSystems\QuartusProjects\quartus_prime_projects\FinalProject\FinalProject --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading FinalProject/FinalProject.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 21.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pll_0 [altera_pll 21.1]
+Progress: Parameterizing module pll_0
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 18.0]
+Progress: Parameterizing module video_vga_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: FinalProject.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: FinalProject.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: FinalProject.pll_0: Able to implement PLL with user settings
+Info: FinalProject.video_vga_controller_0: Video Output Stream: Format: 800 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Warning: FinalProject.video_vga_controller_0.avalon_vga_sink: video_vga_controller_0.avalon_vga_sink must be connected to an Avalon-ST source
+Warning: FinalProject.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
+Warning: FinalProject.video_vga_controller_0: video_vga_controller_0.external_interface must be exported, or connected to a matching conduit.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Deepak\Documents\MastersDegree\EmbeddedSystems\QuartusProjects\quartus_prime_projects\FinalProject\FinalProject.qsys --synthesis=VHDL --output-directory=C:\Users\Deepak\Documents\MastersDegree\EmbeddedSystems\QuartusProjects\quartus_prime_projects\FinalProject\FinalProject\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading FinalProject/FinalProject.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 21.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 21.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 21.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 21.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pll_0 [altera_pll 21.1]
+Progress: Parameterizing module pll_0
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 18.0]
+Progress: Parameterizing module video_vga_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: FinalProject.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: FinalProject.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: FinalProject.pll_0: Able to implement PLL with user settings
+Info: FinalProject.video_vga_controller_0: Video Output Stream: Format: 800 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Warning: FinalProject.video_vga_controller_0.avalon_vga_sink: video_vga_controller_0.avalon_vga_sink must be connected to an Avalon-ST source
+Warning: FinalProject.pll_0: pll_0.locked must be exported, or connected to a matching conduit.
+Warning: FinalProject.video_vga_controller_0: video_vga_controller_0.external_interface must be exported, or connected to a matching conduit.
+Info: FinalProject: Generating FinalProject "FinalProject" for QUARTUS_SYNTH
+Info: jtag_uart_0: Starting RTL generation for module 'FinalProject_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=FinalProject_jtag_uart_0 --dir=C:/Users/Deepak/AppData/Local/Temp/alt9687_293438112810350470.dir/0004_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/Deepak/AppData/Local/Temp/alt9687_293438112810350470.dir/0004_jtag_uart_0_gen//FinalProject_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'FinalProject_jtag_uart_0'
+Info: jtag_uart_0: "FinalProject" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "FinalProject" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'FinalProject_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/21.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/21.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/21.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/21.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=FinalProject_onchip_memory2_0 --dir=C:/Users/Deepak/AppData/Local/Temp/alt9687_293438112810350470.dir/0005_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/21.1/quartus --verilog --config=C:/Users/Deepak/AppData/Local/Temp/alt9687_293438112810350470.dir/0005_onchip_memory2_0_gen//FinalProject_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'FinalProject_onchip_memory2_0'
+Info: onchip_memory2_0: "FinalProject" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Error: Generation stopped, 10 or more modules remaining
+Info: FinalProject: Done "FinalProject" with 10 modules, 7 files
+Error: qsys-generate failed with exit code 1: 1 Error, 3 Warnings
+Info: Stopping: Create HDL design files for synthesis
